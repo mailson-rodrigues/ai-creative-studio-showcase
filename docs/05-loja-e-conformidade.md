@@ -21,7 +21,11 @@ Implementado a partir de um parecer jurídico:
 * **arrependimento em 7 dias**, com protocolo e comprovante; o acesso é revogado na hora;
 * o pagamento ocorre no meio de pagamento, sem dados de cartão no sistema.
 
+## API e provedor
+A loja tem API HTTP documentada (OpenAPI): produtos, documentos legais, resumo de compra, pedidos, arrependimento, download e webhook. O adaptador do meio de pagamento não segue redirecionamentos (para o token não vazar), exige HTTPS e foi testado **apenas contra um servidor local que imita o provedor**. Cada produto exige uma **licença de uso** escrita pelo proprietário, sem texto padrão.
+
 ## Limites
 * **Nenhuma conexão real** com o meio de pagamento foi feita; a lógica foi testada com um provedor simulado.
 * Os textos legais **ainda não foram publicados** e dependem de revisão jurídica.
-* Sem interface, e-mail de confirmação, estorno automático ou nota fiscal.
+* Sem tela, e-mail de confirmação, estorno automático ou nota fiscal.
+* O pedido não usa chave de idempotência: dois cliques criam dois pedidos pendentes (só um chega a ser pago).

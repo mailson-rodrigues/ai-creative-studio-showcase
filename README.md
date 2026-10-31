@@ -12,6 +12,7 @@ Plataforma em desenvolvimento para **criar livros ilustrados, jogos e produtos d
 | [`docs/02-integridade-e-seguranca.md`](docs/02-integridade-e-seguranca.md) | Ativos aprovados imutáveis no banco, auditoria encadeada, aprovação só por humanos |
 | [`docs/04-livros-e-jogos.md`](docs/04-livros-e-jogos.md) | Páginas em camadas, PDF digital e de impressão, jogo digital e kit imprimível |
 | [`docs/05-loja-e-conformidade.md`](docs/05-loja-e-conformidade.md) | Pagamento com assinatura verificada, entrega temporária, aceite com prova e arrependimento |
+| [`docs/06-homologacao.md`](docs/06-homologacao.md) | Os 20 critérios do MVP: o que está atendido, o que está parcial e por quê |
 | [`docs/03-qualidade-e-evidencias.md`](docs/03-qualidade-e-evidencias.md) | Estratégia de testes, o que já foi verificado e o que ainda não foi |
 
 ## Princípios
@@ -25,6 +26,6 @@ Plataforma em desenvolvimento para **criar livros ilustrados, jogos e produtos d
 
 ## Estado
 
-Em desenvolvimento, em fases, cada uma com evidência de teste. Implementados e testados: identidade (MFA, bloqueio), auditoria encadeada, ativos imutáveis, API REST, camada de IA com adaptadores **simulados**, memória do projeto, livros com páginas em camadas e PDF, jogo digital, kit de jogo imprimível e a camada de serviços da loja.
+Em desenvolvimento, em fases, cada uma com evidência de teste. Implementados e testados: identidade (MFA, bloqueio), auditoria encadeada, ativos imutáveis, API REST, camada de IA com adaptadores **simulados**, memória do projeto, livros com páginas em camadas e PDF, jogo digital, kit de jogo imprimível, e a loja (serviços e API HTTP). A fase de homologação foi executada em ambiente local.
 
 **Ainda não existe:** conexão com provedores reais de IA, interface do usuário, conexão real com o meio de pagamento, textos legais publicados. Veja os limites de cada área nos documentos acima.
