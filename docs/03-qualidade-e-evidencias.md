@@ -5,7 +5,7 @@ Regra do projeto: **nada é declarado como testado sem log ou relatório.**
 ## Verificado (executado)
 | Verificação | Resultado |
 |---|---|
-| Testes automatizados contra PostgreSQL real | 36 passando |
+| Testes automatizados contra PostgreSQL real | 57 passando (inclui API, login, MFA e isolamento entre organizações) |
 | Análise estática (lint) | sem avisos |
 | Auditoria de vulnerabilidades das dependências | nenhuma conhecida (após atualização) |
 | Fronteiras entre módulos | contratos passam e **quebram** quando violados (verificado) |
@@ -16,7 +16,7 @@ Os testes de imutabilidade tentam burlar a regra por SQL direto, remoção, trun
 
 ## Ainda não verificado
 * Integração real com provedores de IA (depende de credenciais com faturamento).
-* Autenticação multifator, API HTTP, interface e loja.
+* Interface do usuário e loja.
 * Pagamentos: nenhum fluxo implementado.
 * Revisão jurídica de direitos de autor sobre imagens geradas por IA.
 

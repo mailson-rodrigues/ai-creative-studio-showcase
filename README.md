@@ -23,4 +23,4 @@ Plataforma em desenvolvimento para **criar livros ilustrados, jogos e produtos d
 
 ## Estado
 
-Em desenvolvimento. Núcleo de identidade, auditoria, projetos e ativos implementado e testado; AI Gateway, editor de livros, jogos e loja são as próximas fases.
+Em desenvolvimento. Núcleo de identidade (com MFA e bloqueio por tentativas), auditoria, projetos, ativos e API REST implementado e testado; AI Gateway, editor de livros, jogos e loja são as próximas fases.
