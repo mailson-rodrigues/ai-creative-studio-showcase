@@ -33,4 +33,4 @@ Versões fixadas em arquivo de travamento e auditadas por ferramenta de vulnerab
 
 ## Limites conhecidos
 * A proteção por gatilho do banco não vale contra um superusuário do banco. Por isso existe o hash encadeado, e em produção a aplicação usará um papel sem privilégio de superusuário.
-* Ainda não implementados: cifra em repouso do segredo do MFA, códigos de recuperação, limitação de taxa nos demais endpoints e varredura antivírus de uploads.
+* O segredo do MFA é cifrado em repouso. Ainda não implementados: códigos de recuperação, limitação de taxa nos demais endpoints e varredura antivírus de uploads.

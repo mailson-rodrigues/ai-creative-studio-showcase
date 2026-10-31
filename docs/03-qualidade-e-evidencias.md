@@ -5,7 +5,7 @@ Regra do projeto: **nada é declarado como testado sem log ou relatório.**
 ## Verificado (executado)
 | Verificação | Resultado |
 |---|---|
-| Testes automatizados contra PostgreSQL real | 57 passando (inclui API, login, MFA e isolamento entre organizações) |
+| Testes automatizados contra PostgreSQL real | 196 passando (acesso, ativos imutáveis, IA simulada, livros, jogos, kit imprimível e loja) |
 | Análise estática (lint) | sem avisos |
 | Auditoria de vulnerabilidades das dependências | nenhuma conhecida (após atualização) |
 | Fronteiras entre módulos | contratos passam e **quebram** quando violados (verificado) |
@@ -16,9 +16,14 @@ Os testes de imutabilidade tentam burlar a regra por SQL direto, remoção, trun
 
 ## Ainda não verificado
 * Integração real com provedores de IA (depende de credenciais com faturamento).
-* Interface do usuário e loja.
-* Pagamentos: nenhum fluxo implementado.
+* Interface do usuário.
+* Pagamentos: a lógica de assinatura, idempotência e entrega é testada com um provedor **simulado**; nenhuma chamada real ao meio de pagamento foi feita.
+* Impressão física: nenhum kit foi impresso ou cortado em papel.
+* Qualidade semântica da memória do projeto (usa vetores simulados nos testes).
 * Revisão jurídica de direitos de autor sobre imagens geradas por IA.
+
+## Como as verificações são validadas
+Em pontos críticos usamos **teste de mutação manual**: quebramos a regra de propósito (por exemplo, a conferência da assinatura do webhook, o valor do pagamento ou o espaço entre cartas na folha de impressão) e confirmamos que os testes falham. Só depois a regra é restaurada.
 
 ## Observação sobre o piloto
 O projeto é validado com uma obra infantil real, cujos arquivos e dados **não são publicados** aqui.
